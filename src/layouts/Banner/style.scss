@@ -1,0 +1,20 @@
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: radial-gradient(85.36% 85.36% at 50% 85.36%, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.25) 57.47%, #a582de1d 100%);
+    padding: 1.156rem 1.5rem;
+
+    &--title {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        &--text {
+            color: #6317DB !important;
+            font-weight: 700 !important;
+            font-size: 1.5rem;
+            margin: 0 !important;
+        }
+    }
+}
