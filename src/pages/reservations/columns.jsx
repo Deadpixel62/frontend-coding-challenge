@@ -56,14 +56,14 @@ const columns = [
 
     },
     {
-      title: 'Start',
+      title: 'Start date',
       dataIndex: 'start',
       key: 'start',
       sorter: (a, b) => (dayjs(a.start).isAfter(dayjs(b.start)) ? 1 : -1),
       render: start => new Date(start).toLocaleTimeString('en-US', { month: 'long',day: 'numeric',  year: 'numeric', hour: 'numeric', minute: 'numeric', hour12: true })
     },
     {
-      title: 'End',
+      title: 'End date',
       dataIndex: 'end',
       key: 'end',
       sorter: (a, b) => (dayjs(a.end).isAfter(dayjs(b.end)) ? 1 : -1),

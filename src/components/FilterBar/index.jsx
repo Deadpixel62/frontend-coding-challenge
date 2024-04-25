@@ -69,74 +69,68 @@ function FilterBar() {
   }));
 
   return (
-    <>
-      <div className='d-flex justify-content-between border border-2 border-light rounded p-3 mx-3 '>
-        <Input
-          style={{ width: '19rem', height: '2rem' }}
+    <div className='d-flex justify-content-between border border-2 border-light rounded p-3 mx-3 '>
+      <Input
+        className='filter-bar__search-input'
+        size='large'
+        placeholder={'Search...'}
+        suffix={<SearchOutlined />}
+        value={search}
+        onChange={handleSearch}
+      />
+      <div className='d-flex gap-2 ms-auto'>
+        <DatePicker
+          className='filter-bar__date-picker'
+          allowClear
+          format='DD, MMMM, YYYY'
+          picker='day'
           size='large'
-          placeholder={'Search...'}
-          suffix={<SearchOutlined />}
-          value={search}
-          onChange={handleSearch}
+          onChange={(value) => handleFilterChange(value, 'date')}
+          value={filters?.date ? dayjs(filters?.date) : null}
         />
-        <div className='d-flex gap-2 ms-auto'>
-          <DatePicker
-            style={{ width: 200, height: 31 }}
-            allowClear
-            format='DD, MMMM, YYYY'
-            picker='day'
-            size='large'
-            onChange={(value) => handleFilterChange(value, 'date')}
-            value={filters?.date ? dayjs(filters?.date) : null}
-          />
-          <Select
-            className='select-custom'
-            popupClassName='custom-drop-down'
-            allowClear
-            placeholder={'Status'}
-            options={statusOptions}
-            onChange={(value) => handleFilterChange(value, 'status')}
-            value={filters?.status || undefined}
-          />
-          <Select
-            className='select-custom'
-            popupClassName='custom-drop-down'
-            allowClear
-            placeholder={'Shift'}
-            options={shiftOptions}
-            onChange={(value) => handleFilterChange(value, 'shift')}
-            value={filters?.shift || undefined}
-          />
-          <Select
-            className='select-custom'
-            popupClassName='custom-drop-down'
-            allowClear
-            placeholder={'Area'}
-            options={areaOptions}
-            onChange={(value) => handleFilterChange(value, 'area')}
-            value={filters?.area || undefined}
-          />
+        <Select
+          className='filter-bar__select'
+          allowClear
+          placeholder={'Status'}
+          options={statusOptions}
+          onChange={(value) => handleFilterChange(value, 'status')}
+          value={filters?.status || undefined}
+        />
+        <Select
+          className='filter-bar__select'
+          allowClear
+          placeholder={'Shift'}
+          options={shiftOptions}
+          onChange={(value) => handleFilterChange(value, 'shift')}
+          value={filters?.shift || undefined}
+        />
+        <Select
+          className='filter-bar__select'
+          allowClear
+          placeholder={'Area'}
+          options={areaOptions}
+          onChange={(value) => handleFilterChange(value, 'area')}
+          value={filters?.area || undefined}
+        />
 
-          <Button
-            className='d-flex align-items-center filter-bar__btn filter-bar__btn--primary'
-            icon={<CheckCircleFilled />}
-            onClick={handleApplyFilters}
-            type='primary'
-          >
-            Apply filters
-          </Button>
+        <Button
+          className='d-flex align-items-center filter-bar__btn filter-bar__btn--primary'
+          icon={<CheckCircleFilled />}
+          onClick={handleApplyFilters}
+          type='primary'
+        >
+          Apply filters
+        </Button>
 
-          <Button
-            className='d-flex align-items-center filter-bar__btn'
-            icon={<CloseCircleFilled />}
-            onClick={handleResetFilters}
-          >
-            Reset filters
-          </Button>
-          </div>
-
+        <Button
+          className='d-flex align-items-center filter-bar__btn'
+          icon={<CloseCircleFilled />}
+          onClick={handleResetFilters}
+        >
+          Reset filters
+        </Button>
       </div>
-    </>
+    </div>
   );
 }
 

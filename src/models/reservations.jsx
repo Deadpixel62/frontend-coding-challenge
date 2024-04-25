@@ -24,6 +24,7 @@ export default {
   effects: {
         * GET_RESERVATIONS({ payload }, { put,
       }) {
+        // Here we will place the actual api call
         yield put({
           type: 'setState',
           payload: {
@@ -42,6 +43,8 @@ export default {
           search,
         },
       });
+
+      // This is just for demonstration with mock data, otherwise the filtering would be handled on the server side
 
       const searchLower = search.toLowerCase();
 
@@ -106,6 +109,8 @@ export default {
       const { filters, search } = yield select((state) => state.reservations);
       const { reservations } = payload;
 
+      // This is just for demonstration with mock data, otherwise the filtering would be handled on the server side
+
       const filteredReservations = reservations.filter((reservation) => {
       
         // Check if the reservation matches the applied filters
@@ -146,6 +151,8 @@ export default {
 
     * RESET_FILTERS({ payload }, { put }) {
       const { reservations } = payload;
+
+      // Here we will place an api call to get the raw reservations data
       yield put({
         type: 'setState',
         payload: {

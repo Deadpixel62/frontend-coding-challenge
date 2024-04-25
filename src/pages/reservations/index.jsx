@@ -12,6 +12,7 @@ function Reservations() {
 const dispatch = useDispatch();
 
 useEffect(() => {
+  // Here we'll pass the actual api call:
   dispatch({
     type: 'reservations/GET_RESERVATIONS',
     payload: reservations,

@@ -8,9 +8,9 @@ const { Title } = Typography;
 function Banner({ title }) {
   return (
     <div className='banner py-3'>
-      <div className="banner--title">
+      <div className="banner__title">
         <Image preview={false} className="logo" width={100}  src={logoTitle} />
-        <Title className="banner--title--text" level={2}>{title}</Title>
+        <Title className="banner__title--text" level={2}>{title}</Title>
       </div>
     </div>
   );

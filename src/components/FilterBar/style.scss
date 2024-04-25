@@ -1,14 +1,22 @@
-.select-custom {
-    min-width: 140px !important;
-    flex-grow: 1;
-}
-
 .filter-bar {
     &__btn {
-        // height: 1.875rem;
-
         &--primary {
             background-color: #6317DB !important;
         }
+    }
+
+    &__search-input {
+        width: 19rem;
+        height: 2rem;
+    }
+
+    &__date-picker {
+        width: 10rem;
+        height: 2rem;
+    }
+
+    &__select {
+        min-width: 8.75rem !important;
+        flex-grow: 1;
     }
 }

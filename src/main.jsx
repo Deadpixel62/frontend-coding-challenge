@@ -13,7 +13,6 @@ const app = dva({
   },
 });
 
-// eslint-disable-next-line no-underscore-dangle
 export const Store = app._store;
 
 const AppContainer = app.start(<App />);

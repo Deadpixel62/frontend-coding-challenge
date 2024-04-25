@@ -1,12 +1,8 @@
 #root {
   margin: 0;
   padding: 0;
-
-  /* Set font and box-sizing for consistency */
   font-family: 'Arial', sans-serif;
   box-sizing: border-box;
-
-  /* Define width and height to fill the viewport */
   width: 100%;
   height: 100%;
 }
