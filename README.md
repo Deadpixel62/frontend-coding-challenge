@@ -1,8 +1,37 @@
 # React + Vite
+This project was initialized using Vite.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Project Name
 
-Currently, two official plugins are available:
+Reservations page
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Overview
+
+This projects emulates a reservation page using mock data.
+Operations you can do on the reservations table: 
+- Search reservations using first and last name.
+- Filter reservations by: status | area | shift | date.
+- Sort reservations based on : Full name | Business date | start & end date | status | quantity.
+
+Note: While the search happens automatically, you need to click the 'Apply filters' button to apply the selected filters.
+
+## Getting Started
+
+For this project all you need is a code editor, access to the internet and a github account to fork this repo.
+
+### Prerequisites
+
+For this project you will need Node.js, npm, or yarn on your machine.
+
+### Installation
+
+```bash
+# Clone the repository
+git clone <repository-url>
+
+# Navigate to the project directory
+cd project-name
+
+# Install dependencies
+npm install
+
