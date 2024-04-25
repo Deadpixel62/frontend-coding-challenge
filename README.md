@@ -13,6 +13,8 @@ Operations you can do on the reservations table:
 - Filter reservations by: status | area | shift | date.
 - Sort reservations based on : Full name | Business date | start & end date | status | quantity.
 
+Note: While the search happens automatically, you need to click the 'Apply filters' button to apply the selected filters.
+
 ## Getting Started
 
 For this project all you need is a code editor, access to the internet and a github account to fork this repo.
