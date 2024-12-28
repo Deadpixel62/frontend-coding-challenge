@@ -6,7 +6,7 @@ function PageLayout({
   children,
 }) {
   return (
-    <div className="page-layout">
+    <div style={{minHeight: '100vh'}} className="page-layout h-100">
       <Banner title={title}/>
       {children}
     </div>
